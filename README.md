@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://getbootstrap.com/">
-    <img src="https://github.com/aridanpantoja/alura-space/blob/main/public/images/logo.png" alt="Alura Space Logo" width="250">
-  </a>
+  <img src="https://github.com/aridanpantoja/alura-space/blob/main/public/images/logo.png" alt="Alura Space Logo" width="250">
 </p>
 
 <p align="center">
