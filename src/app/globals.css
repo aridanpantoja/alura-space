@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-rgb: 217, 217, 217;
+  --background-start-rgb: 4, 24, 51;
+  --background-mid-rgb: 4, 36, 79;
+  --background-end-rgb: 21, 69, 128;
+}
+
+body {
+  color: rgb(var(--text-rgb));
+  background: linear-gradient(174.61deg,
+    rgb(var(--background-start-rgb)) 4.16%,
+    rgb(var(--background-mid-rgb)) 48%,
+    rgb(var(--background-end-rgb)) 96.76%);
+  min-height: 100vh;
+  min-width: 100vw;
+}

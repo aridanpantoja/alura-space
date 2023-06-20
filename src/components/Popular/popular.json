@@ -1,0 +1,37 @@
+[
+    {
+      "titulo": "Nome da Foto",
+      "creditos": "Alura Space",
+      "imagem": "/images/foto-1.jpg",
+      "id": "1",
+      "tag": "Galáxias"
+    },
+    {
+      "titulo": "Nome da Foto",
+      "creditos": "Alura Space",
+      "imagem": "/images/foto-3.jpg",
+      "id": "2",
+      "tag": "Lua"
+    },
+    {
+      "titulo": "Nome da Foto",
+      "creditos": "Alura Space",
+      "imagem": "/images/foto-4.jpg",
+      "id": "3",
+      "tag": "Galáxias"
+    },
+    {
+      "titulo": "Nome da Foto",
+      "creditos": "Alura Space",
+      "imagem": "/images/foto-7.jpg",
+      "id": "4",
+      "tag": "Estrelas"
+    },
+    {
+      "titulo": "Nome da Foto",
+      "creditos": "Alura Space",
+      "imagem": "/images/foto-9.jpg",
+      "id": "5",
+      "tag": "Estrelas"
+    }
+  ]
