@@ -5,7 +5,7 @@ import Popular from "../Popular"
 
 export default function Main() {
     return (
-        <main className="grid grid-cols-5 gap-x-7 mx-6">
+        <main className="flex flex-col xl:grid xl:grid-cols-5 xl:gap-x-7 mx-6 xl:mx-6">
             <Menu />
             <Banner />
             <Galery />

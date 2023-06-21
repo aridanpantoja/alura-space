@@ -15,6 +15,4 @@ body {
     rgb(var(--background-start-rgb)) 4.16%,
     rgb(var(--background-mid-rgb)) 48%,
     rgb(var(--background-end-rgb)) 96.76%);
-  min-height: 100vh;
-  min-width: 100vw;
 }
