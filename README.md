@@ -21,6 +21,12 @@
 </div>
   
 <h2>Installation</h2>
+<p>1. Clone the repo</p>
+
+```bash
+git clone https://github.com/aridanpantoja/alura-space.git
+```
+<p>2. Install packages</p>
 
 ```bash
 npm install
@@ -30,3 +36,16 @@ npm install
 ```bash
 npm run dev
 ```
+
+<h2>Criado com</h2>
+
+<div style="display: inline_block">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React badge"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="NextJS badge"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3490DC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS badge"/>
+</div>
+
+
+
