@@ -37,14 +37,16 @@ npm install
 npm run dev
 ```
 
-<h2>Criado com</h2>
+<h2>Built with</h2>
 
 <div style="display: inline_block">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React badge"/>
   &nbsp;
   <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="NextJS badge"/>
   &nbsp;
-  <img src="https://img.shields.io/badge/Tailwind_CSS-3490DC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS badge"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3490DC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind badge"/>
+   &nbsp;
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="TailwindCSS badge"/>
 </div>
 
 
