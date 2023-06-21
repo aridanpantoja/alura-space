@@ -6,7 +6,7 @@ export default function Menu() {
             <ul className="flex justify-center flex-col md:flex-row md:flex-wrap xl:flex-col gap-4 xl:gap-8 xl:mx-0">
                 <li className="flex items-center gap-2 xl:gap-4">
                     <img src="/icons/home-ativo.png" alt="Ícone Início"/>
-                    <a href="/" className="text-lg md:text-2xl text-violet-400 font-bold">Início</a>
+                    <a href="/" className="text-lg md:text-2xl text-indigo-500 font-bold">Início</a>
                 </li>
                 <li className="flex items-center gap-2 xl:gap-4">
                     <img src="/icons/mais-vistas-inativo.png" alt="Ícone Mais vistas"/>
