@@ -1,5 +1,5 @@
 "use client"
-import { Heart, Maximize2, X } from 'lucide-react'
+import { Maximize2, X } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Card({ item }) {
