@@ -1,3 +1,5 @@
+import { Camera, Eclipse, Images, Orbit } from 'lucide-react'
+
 export const siteConfig = {
   name: 'Space Diary',
   url: 'https://spacediary.vercel.app',
@@ -10,19 +12,27 @@ export const siteConfig = {
 
 export const pages = [
   {
-    href: '/galery',
-    name: 'Galery',
+    href: '/todays-picture',
+    name: "Today's Picture",
+    description: 'View NASA’s picture of the day.',
+    Icon: Camera,
   },
   {
-    href: '/today',
-    name: 'Today',
+    href: '/rovers',
+    name: 'Rover Photos',
+    description: 'See Mars rover images.',
+    Icon: Images,
   },
   {
-    href: '/today',
-    name: 'Today',
+    href: '/asteroids',
+    name: 'Asteroids',
+    description: 'Track nearby asteroids.',
+    Icon: Orbit,
   },
   {
-    href: '/today',
-    name: 'Today',
+    href: '/solar-system',
+    name: 'Solar System',
+    description: 'Explore the solar system.',
+    Icon: Eclipse,
   },
 ]

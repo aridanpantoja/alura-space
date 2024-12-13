@@ -19,12 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark h-full">
       <body
-        className={cn('relative min-h-screen antialiased', openSans.className)}
+        className={cn(
+          'relative flex min-h-screen flex-col antialiased',
+          openSans.className,
+        )}
       >
-        <div>
-          <Navbar />
-          {children}
-        </div>
+        <Navbar />
+        <main className="flex w-full flex-grow">{children}</main>
       </body>
     </html>
   )

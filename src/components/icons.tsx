@@ -1,6 +1,55 @@
 type IconProps = React.HTMLAttributes<SVGElement>
 
 export const Icons = {
+  logo: (props: IconProps) => (
+    <svg
+      {...props}
+      width="245"
+      height="260"
+      viewBox="0 0 245 260"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M242.195 130.305L158.433 94.5853L122.333 0.722587V130.305V259.888L158.433 166.025L242.195 130.305Z"
+        fill="url(#paint0_linear_2_25)"
+      />
+      <path
+        d="M86.232 94.5853L2.47064 130.305L86.232 166.025L122.333 259.888V130.305V0.722587L86.232 94.5853Z"
+        fill="url(#paint1_linear_2_25)"
+      />
+      <path
+        d="M214.092 152.693L208.246 154.773C223.714 170.847 230.167 185.009 223.759 193.095C211.559 208.487 157.416 196.039 102.828 165.29C48.2404 134.542 13.8777 97.1366 26.0777 81.7433C33.0097 72.9979 53.4884 73.2486 79.8884 80.7286L81.6004 76.2406C43.4497 63.4393 12.8537 61.5366 3.27905 73.6179C-11.5663 92.3499 29.7017 137.558 95.4537 174.597C161.207 211.633 226.544 226.473 241.388 207.742C250.324 196.467 238.922 175.598 214.092 152.693Z"
+        fill="#A855F7"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_2_25"
+          x1="182.264"
+          y1="211.639"
+          x2="182.264"
+          y2="22.4525"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#9333EA" />
+          <stop offset="0.530151" stopColor="#7E22CE" />
+          <stop offset="1" stopColor="#3B0764" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_2_25"
+          x1="-106.108"
+          y1="-99.8317"
+          x2="267.165"
+          y2="276.213"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#9333EA" />
+          <stop offset="0.530151" stopColor="#7E22CE" />
+          <stop offset="1" stopColor="#3B0764" />
+        </linearGradient>
+      </defs>
+    </svg>
+  ),
   twitter: (props: IconProps) => (
     <svg
       {...props}
