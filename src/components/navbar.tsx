@@ -8,7 +8,7 @@ import { MobileNav } from './mobile-nav'
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-primary/20 px-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full px-4 backdrop-blur supports-[backdrop-filter]:bg-background/20">
       <div className="flex h-14 items-center justify-between">
         <MobileNav />
 
