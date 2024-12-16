@@ -72,4 +72,31 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    @apply text-5xl font-bold leading-tight tracking-tight
+  }
 }
+
+@keyframes move-border {
+  0% {
+    border-color: #4c1d95; /* Cor inicial */
+    border-width: 2px;
+  }
+  50% {
+    border-color: #8b5cf6; /* Cor intermediária */
+    border-width: 2px;
+  }
+  100% {
+    border-color: #4c1d95; /* Cor final */
+    border-width: 2px;
+  }
+}
+
+/* Classe para aplicar a animação */
+@layer components {
+  .animated-border {
+    border: 2px solid #7c3aed; /* Cor inicial */
+    animation: move-border 5s infinite; /* Definindo a animação */
+  }
+}
+

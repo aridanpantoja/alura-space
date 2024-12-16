@@ -15,7 +15,7 @@ export function Navbar() {
         <nav className="hidden items-center md:flex">
           <Link href="/" className="mr-6 flex items-center gap-2">
             <Icons.logo className="size-6" />
-            <span className="font-bold">Space Diary</span>
+            <span className="font-bold">Spacepix</span>
           </Link>
 
           <ul className="flex gap-4 text-sm xl:gap-6">
