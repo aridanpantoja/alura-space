@@ -5,10 +5,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import { pages } from '@/config'
+
 import { AlignLeft } from 'lucide-react'
 import Link from 'next/link'
 import { Icons } from './icons'
+import { siteConfig } from '@/config'
 
 export function MobileNav() {
   return (
@@ -23,7 +24,7 @@ export function MobileNav() {
           <SheetTitle>Navegação</SheetTitle>
           <nav>
             <ul className="mt-4 grid grid-cols-1 gap-4 md:gap-6">
-              {pages.map((page, i) => (
+              {siteConfig.pages.map((page, i) => (
                 <li key={i}>
                   <Link
                     href={page.href}

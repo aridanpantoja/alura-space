@@ -1,10 +1,9 @@
-import { getPictureOfDay } from '@/actions/apod'
+import { DayPicture } from '@/components/day-picture'
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
+import { CircleCheck } from 'lucide-react'
+import { Suspense } from 'react'
 
-export default async function Home() {
-  const image = await getPictureOfDay()
-
+export default function Home() {
   return (
     <>
       <section className="relative flex w-full flex-col items-center justify-center py-24">
@@ -12,43 +11,48 @@ export default async function Home() {
           <h1 className="mb-6">
             Discover the universe
             <br />
-            <span className="text-primary">one picture</span> at a time
+            <span className="text-violet-600">one picture</span> at a time
           </h1>
           <p className="mb-8 text-xl text-muted-foreground">
             Every day brings a new picture that tells a captivating story about
             the wonders of space and the universe beyond.
           </p>
-          <Button>Ver foto do dia</Button>
+          <div className="space-x-2">
+            <Button>Download Picture</Button>
+            <Button variant="ghost">See Galery &rarr;</Button>
+          </div>
         </div>
       </section>
 
-      <section className="relative mx-auto flex w-full max-w-3xl flex-col justify-center gap-6 px-6">
-        <div className="animated-border z-10 flex w-full items-center justify-center overflow-hidden rounded-md bg-muted">
-          <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-xl">
-            <Image
-              src={image.hdurl}
-              alt="screenshot"
-              className="h-full object-cover"
-              width={1280}
-              height={720}
-            />
-            <div className="absolute bottom-6 right-1/2 max-w-prose translate-x-1/2 space-y-2 rounded-md border border-gray-50/20 bg-muted/80 p-4 supports-[backdrop-filter]:bg-gray-300/20">
-              <div className="space-y-2 overflow-hidden rounded-xl border border-gray-50/20 bg-background/80 p-4 backdrop-blur-2xl supports-[backdrop-filter]:bg-background/60">
-                <div className="flex items-center justify-between">
-                  <p className="text-sm font-bold">{image.title}</p>
-                  {image.copyright && (
-                    <p className="text-sm">&copy; {image.copyright}</p>
-                  )}
-                </div>
-                <p className="truncate text-sm text-muted-foreground">
-                  {image.explanation}
-                </p>
-              </div>
-            </div>
-          </div>
+      <section className="relative mx-auto mb-48 flex w-full max-w-xl flex-col justify-center gap-6 px-6">
+        <Suspense fallback={<p>Loading...</p>}>
+          <DayPicture />
+        </Suspense>
+        <div className="absolute inset-0 mx-auto flex w-10/12 translate-y-5 items-center overflow-hidden rounded-xl border border-border/50 bg-muted"></div>
+        <div className="absolute inset-0 -z-10 mx-auto flex w-9/12 translate-y-10 items-center overflow-hidden rounded-xl border border-border/50 bg-muted/70"></div>
+      </section>
+
+      <section className="mx-auto flex max-w-5xl flex-col-reverse items-center gap-6 px-6 md:grid md:grid-cols-2 md:gap-12">
+        <div className="animated-border flex h-full w-full items-center justify-center rounded-md bg-muted py-12"></div>
+
+        <div className="w-full space-y-4 text-center md:text-start">
+          <h2 className="text-3xl font-bold">Save Your Favorite Images</h2>
+          <p className="text-pretty text-muted-foreground">
+            Create your own constellation of images and carry the cosmos with
+            you!
+          </p>
+          <ul className="mx-auto flex w-fit flex-row flex-wrap justify-center gap-4 md:w-full md:flex-col">
+            <li className="flex gap-2">
+              <CircleCheck className="text-primary" /> Quick Access
+            </li>
+            <li className="flex gap-2">
+              <CircleCheck className="text-primary" /> Share the Wonder
+            </li>
+            <li className="flex gap-2">
+              <CircleCheck className="text-primary" /> Immersive Viewing
+            </li>
+          </ul>
         </div>
-        <div className="absolute inset-0 mx-auto flex h-[550px] w-10/12 translate-y-5 items-center overflow-hidden rounded-xl border border-border/50 bg-muted"></div>
-        <div className="absolute inset-0 -z-10 mx-auto flex h-[550px] w-9/12 translate-y-10 items-center overflow-hidden rounded-xl border border-border/50 bg-muted/70"></div>
       </section>
     </>
   )

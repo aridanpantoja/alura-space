@@ -1,10 +1,11 @@
-import { NavLink } from '@/components/nav-link'
-import { pages, siteConfig } from '@/config'
-import Link from 'next/link'
 import { Icons } from '@/components/icons'
+import { NavLink } from '@/components/nav-link'
 import { Button, buttonVariants } from '@/components/ui/button'
+import { siteConfig } from '@/config'
 import { Sun } from 'lucide-react'
-import { MobileNav } from './mobile-nav'
+import Link from 'next/link'
+import { MobileNav } from '@/components/mobile-nav'
+import { Logo } from '@/components/logo'
 
 export function Navbar() {
   return (
@@ -13,13 +14,10 @@ export function Navbar() {
         <MobileNav />
 
         <nav className="hidden items-center md:flex">
-          <Link href="/" className="mr-6 flex items-center gap-2">
-            <Icons.logo className="size-6" />
-            <span className="font-bold">Spacepix</span>
-          </Link>
+          <Logo />
 
-          <ul className="flex gap-4 text-sm xl:gap-6">
-            {pages.map((page, i) => (
+          <ul className="ml-6 flex gap-4 text-sm xl:gap-6">
+            {siteConfig.pages.map((page, i) => (
               <NavLink href={page.href} key={i}>
                 {page.name}
               </NavLink>
