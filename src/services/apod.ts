@@ -1,6 +1,3 @@
-import axios from 'axios'
-import { cache } from 'react'
-
 type apodImageType = {
   date: string
   copyright: string | null
@@ -12,11 +9,17 @@ type apodImageType = {
 }
 
 export async function getAPOD() {
-  const response = await axios.get<apodImageType>(
+  const response = await fetch(
     `https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_API_KEY}`,
+    {
+      next: {
+        revalidate: 60 * 60 * 24,
+      },
+    },
   )
+  const data: apodImageType = await response.json()
 
-  return response.data
+  return data
 }
 
-export const getPictureOfDay = cache(getAPOD)
+export const getPictureOfDay = getAPOD

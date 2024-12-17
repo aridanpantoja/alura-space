@@ -16,12 +16,6 @@ export const siteConfig = {
       Icon: Camera,
     },
     {
-      href: '/galery',
-      name: 'Collections',
-      description: 'View NASA’s picture of the day.',
-      Icon: Camera,
-    },
-    {
       href: '/about',
       name: 'About',
       description: 'See Mars rover images.',
