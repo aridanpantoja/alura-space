@@ -1,17 +1,36 @@
+import { DayPicture } from '@/components/day-picture'
+import { Button } from '@/components/ui/button'
+import { WidthWrapper } from '@/components/width-wrapper'
+import { Suspense } from 'react'
+
 export default function Home() {
   return (
     <>
-      <section className="flex w-full items-center justify-center px-6">
-        <div className="max-w-2xl space-y-6 text-center">
-          <h1 className="text-5xl font-bold">
-            Stellar websites by the best teams
+      <section>
+        <WidthWrapper className="max-w-2xl pb-0 text-center">
+          <h1 className="mb-6">
+            Discover the universe{' '}
+            <span className="text-primary">one picture</span> at a time
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            fugiat atque obcaecati ad deleniti reiciendis necessitatibus
-            voluptatum ipsam similique.
+          <p className="mb-8 text-muted-foreground md:text-xl">
+            Every day brings a new picture that tells a captivating story about
+            the wonders of space and the universe beyond.
           </p>
-        </div>
+          <div className="space-x-2">
+            <Button>Download Picture</Button>
+            <Button variant="ghost">See Galery &rarr;</Button>
+          </div>
+        </WidthWrapper>
+      </section>
+
+      <section>
+        <WidthWrapper className="max-w-5xl">
+          <div>
+            <Suspense fallback={<p>Loading...</p>}>
+              <DayPicture />
+            </Suspense>
+          </div>
+        </WidthWrapper>
       </section>
     </>
   )

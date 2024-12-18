@@ -1,8 +1,10 @@
+import { Footer } from '@/components/footer'
+import { Navbar } from '@/components/navbar'
+import { SparklesCore } from '@/components/ui/sparkles'
+import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Open_Sans as OpenSans } from 'next/font/google'
 import './globals.css'
-import { Navbar } from '@/components/navbar'
-import { cn } from '@/lib/utils'
 
 const openSans = OpenSans({ subsets: ['latin'] })
 
@@ -25,7 +27,19 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-        <main className="flex w-full flex-grow">{children}</main>
+        <main className="w-full flex-grow">{children}</main>
+        <Footer />
+        <div className="absolute top-0 -z-10 h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(37,99,235,0.4),rgba(255,255,255,0))]"></div>
+        <div className="absolute inset-0 -z-20 h-full w-full opacity-60">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={1}
+            maxSize={2}
+            particleDensity={8}
+            className="h-full w-full"
+          />
+        </div>
       </body>
     </html>
   )
